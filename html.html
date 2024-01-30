@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="instructions" style="text-align:center">Your Photo Editor</h1>
+    <input style="margin-top: 40px;" type="file" id="fileInput" accept="image/*" />
+    <p style="text-align: center;margin-top: 20px;">Aceasta este poza inițiala:</p>
+    <div id="imageContainer" style="margin-top: 20px; max-width: 100%;">
+    </div>
+    <p id="tx">Aici poți modifica poza:</p>
+    <canvas id="editorCanvas" style="margin-top: 20px; max-width: 100%; text-align: center;" onmousedown="startSel(event)"
+        onmousemove="updateSel(event)" onmouseup="endSel(event)"></canvas>
+    <p></p>
+    <div style="text-align: center;">
+    <button id="afis" onclick="afisareImagine()">Afiseaza Imaginea</button>
+    </div>
+    <div id="buttons" style="text-align: center;">
+        <button onclick="salvare()">Salvare</button>
+        <button onclick="seteazaEfect()">Aplică Efect</button>
+        <button onclick="stergerePixeli()">Sterge selectia</button>
+        <button onclick="decupare()">Decupare</button>
+        <button onclick="promptMarimi()">Scalare</button>
+        <button onclick="resetare()">Resetare Imagine</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
